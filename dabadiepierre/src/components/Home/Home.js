@@ -52,6 +52,7 @@ const Home = () => {
     },
     
   ];
+
   const [model, setModel] = useState(false);
   const [tempimgSrc, SetTempImgSrc] = useState("");
   const getImg = (imgSrc) => {

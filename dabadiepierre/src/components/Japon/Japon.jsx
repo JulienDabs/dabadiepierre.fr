@@ -4,7 +4,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/La Vague.jpg";
 import Img2 from "./img/Nuit glaciale.jpg";
 import Img3 from "./img/Tempete de Neige.jpg";
-//import Img4 from "./img/Vent sur Fuji Yama.jpg";
 import Img4 from "./img/Viet Nam.jpg";
 import Img5 from "./img/Zéro.jpg";
 
