@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import "./home.css";
+import "./rouleau.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/baie des anges.jpg";
-import Img2 from "./img/Le Port du Brusc.jpg";
-import Img3 from "./img/Main d'Enfant.jpg";
-import Img4 from "./img/Mont SALVA.jpg";
-import Img5 from "./img/Mont Tremblant.jpg";
-import Img6 from "./img/NY at night.jpg";
-import Img7 from "./img/Ousins et Citrons.jpg";
-import Img8 from "./img/Rhum.jpg";
-import Img9 from "./img/Vespa.jpg";
+import Img2 from "./img/hiver-quebec.jpg";
+import Img3 from "./img/Piscine Tunisienne.jpg";
+import Img4 from "./img/Mont Tremblant.jpg";
+import Img5 from "./img/Québec Winter.jpg";
+import Img6 from "./img/Saint Tropez.jpg";
+import Img7 from "./img/Villa Californienne.jpg";
+import Img8 from "./img/Villa Clalifornienne 2.jpg";
+import Img9 from "./img/vue sur mer.jpg";
 
 
-const Home = () => {
+const Rouleau = () => {
   let data = [
     {
       id: 1,
@@ -87,4 +87,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Rouleau;

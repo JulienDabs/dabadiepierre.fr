@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./aerogrpahe.css";
+import "./aerographe.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/caro pop art 2008.jpg";
 import Img2 from "./img/coup de soleil.jpg";
@@ -10,7 +10,7 @@ import Img6 from "./img/Nu.jpg";
 import Img7 from "./img/pubs.jpg";
 import Img8 from "./img/st Rémi d'Amherst.jpg";
 import Img9 from "./img/Texas.jpg";
-import Img10 from "./img/Tomate et Poivronfa-stack.jpg";
+import Img10 from "./img/Tomate et Poivrons.jpg";
 
 
 const Aerographe = () => {

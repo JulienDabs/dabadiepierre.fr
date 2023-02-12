@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import "./home.css";
+import "./japon.css";
 import CloseIcon from "@mui/icons-material/Close";
-import Img1 from "./img/baie des anges.jpg";
-import Img2 from "./img/Le Port du Brusc.jpg";
-import Img3 from "./img/Main d'Enfant.jpg";
-import Img4 from "./img/Mont SALVA.jpg";
-import Img5 from "./img/Mont Tremblant.jpg";
-import Img6 from "./img/NY at night.jpg";
-import Img7 from "./img/Ousins et Citrons.jpg";
-import Img8 from "./img/Rhum.jpg";
-import Img9 from "./img/Vespa.jpg";
+import Img1 from "./img/La Vague.jpg";
+import Img2 from "./img/Nuit glaciale.jpg";
+import Img3 from "./img/Tempete de Neige.jpg";
+//import Img4 from "./img/Vent sur Fuji Yama.jpg";
+import Img4 from "./img/Viet Nam.jpg";
+import Img5 from "./img/Zéro.jpg";
 
 
-const Home = () => {
+
+const Japon = () => {
   let data = [
     {
       id: 1,
@@ -34,22 +32,9 @@ const Home = () => {
       id: 5,
       imgSrc: Img5,
     },
-    {
-      id: 6,
-      imgSrc: Img6,
-    },
-    {
-      id: 7,
-      imgSrc: Img7,
-    },
-    {
-      id: 8,
-      imgSrc: Img8,
-    },
-    {
-      id: 9,
-      imgSrc: Img9,
-    },
+    
+    
+    
     
   ];
   const [model, setModel] = useState(false);
@@ -60,8 +45,8 @@ const Home = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>Pierre Dabadie</h1>
-    <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
+    <h1 style={{ textAlign: "center" }}>La période Japon (reproductions)</h1>
+    <h2 style={{ textAlign: "center" }}>Pierre Dabadie, artiste Peintre</h2>
       <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt="pierre Dabadie" />
         <CloseIcon onClick={() => setModel(false)} />
@@ -87,4 +72,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Japon;

@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import "./home.css";
+import "./contemporain.css";
 import CloseIcon from "@mui/icons-material/Close";
-import Img1 from "./img/baie des anges.jpg";
-import Img2 from "./img/Le Port du Brusc.jpg";
-import Img3 from "./img/Main d'Enfant.jpg";
-import Img4 from "./img/Mont SALVA.jpg";
-import Img5 from "./img/Mont Tremblant.jpg";
-import Img6 from "./img/NY at night.jpg";
-import Img7 from "./img/Ousins et Citrons.jpg";
-import Img8 from "./img/Rhum.jpg";
-import Img9 from "./img/Vespa.jpg";
+import Img1 from "./img/café des bains ROYAN.jpg";
+import Img2 from "./img/Cannes.jpg";
+import Img3 from "./img/Femme Bleue.jpg";
+import Img4 from "./img/gerbe d'eau.jpg";
+import Img5 from "./img/Main d'Enfant.jpg";
+import Img6 from "./img/Piscine.jpg";
+import Img7 from "./img/port sanary 1er prix.jpg";
+import Img8 from "./img/Sanary.jpg";
 
-
-const Home = () => {
+const Contemporain = () => {
   let data = [
     {
       id: 1,
@@ -46,10 +44,7 @@ const Home = () => {
       id: 8,
       imgSrc: Img8,
     },
-    {
-      id: 9,
-      imgSrc: Img9,
-    },
+    
     
   ];
   const [model, setModel] = useState(false);
@@ -87,4 +82,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Contemporain;
