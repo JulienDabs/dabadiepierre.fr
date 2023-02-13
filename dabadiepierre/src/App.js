@@ -24,6 +24,8 @@ const App = () => (
 
 );
 
+//I wasn't able to place the navbar into another filegit 
+
 class NavBar extends Component {
   state = {clicked : false}
   handleClick = () => {
@@ -74,7 +76,7 @@ class NavBar extends Component {
 const Main = () => {
   return (
     <Routes>
-       {/* The Switch decides which component to show based on the current URL.*/}
+       
         <Route exact path='/' element={<Home/>}></Route>
         <Route exact path='/Biographie' element={<Bio/>}></Route>
         <Route exact path='/Aerographe' element={<Aerographe/>}></Route>
