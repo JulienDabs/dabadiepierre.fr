@@ -47,146 +47,182 @@ const Huile = () => {
     {
       id: 1,
       imgSrc: Img1,
+      alt: "Alderney"
     },
     {
       id: 2,
       imgSrc: Img2,
+      alt: "Les Antilles"
     },
     {
       id: 3,
       imgSrc: Img3,
+      alt: "Bouquet moderne"
     },
     {
       id: 4,
       imgSrc: Img4,
+      alt: "Bouquet"
     },
     {
       id: 5,
       imgSrc: Img5,
+      alt: "Café de nuit | Van Gogh"
     },
     {
       id: 6,
       imgSrc: Img6,
+      alt: "Cage tunisienne"
     },
     {
       id: 7,
       imgSrc: Img7,
+      alt: "Caroline"
     },
     {
       id: 8,
       imgSrc: Img8,
+      alt: "Chaise"
     },
     {
       id: 9,
       imgSrc: Img9,
+      alt: "Cyprès & Lavandes"
     },
     {
       id: 10,
       imgSrc: Img10,
+      alt: "Fenêtre vue mer"
     },
     {
       id: 11,
       imgSrc: Img11,
+      alt: "Géza"
     },
     {
       id: 12,
       imgSrc: Img12,
+      alt: "Grèce"
     },
     {
       id: 13,
       imgSrc: Img13,
+      alt: "Hôtel la Garoupe | Antibes"
     },
     {
       id: 14,
       imgSrc: Img14,
+      alt: "Intérieur rouge | Matisse"
     },
     {
       id: 15,
       imgSrc: Img15,
+      alt: "Iris"
     },
     {
       id: 16,
       imgSrc: Img16,
+      alt: "Julien"
     },
     {
       id: 17,
       imgSrc: Img17,
+      alt: "La Cadière"
     },
     {
       id: 18,
       imgSrc: Img18,
+      alt: "La tristesse du Roy"
     },
     {
       id: 19,
       imgSrc: Img19,
+      alt: "Lavandes"
     },
     {
       id: 20,
       imgSrc: Img20,
+      alt: "Le Brusc"
     },
     {
       id: 21,
       imgSrc: Img21,
+      alt: "Mairie de Sanary"
     },
     {
       id: 22,
       imgSrc: Img22,
+      alt: "Maquereaux"
     },
     {
       id: 23,
       imgSrc: Img23,
+      alt: "Martinique"
     },
     {
       id: 24,
       imgSrc: Img24,
+      alt: "Oliviers"
     },
     {
       id: 25,
       imgSrc: Img25,
+      alt: "Oranges"
     },
     {
       id: 26,
       imgSrc: Img26,
+      alt: "Piscine tunisienne"
     },
     {
       id: 27,
       imgSrc: Img27,
+      alt: "Port du Brusc"
     },
     {
       id: 28,
       imgSrc: Img28,
+      alt: "Port en Méditarranée"
     },
     {
       id: 29,
       imgSrc: Img29,
+      alt: "Rhum"
     },
     {
       id: 30,
       imgSrc: Img30,
+      alt: "Sanary"
     },
     {
       id: 31,
       imgSrc: Img31,
+      alt: "St-Tropez"
     },
     {
       id: 32,
       imgSrc: Img32,
+      alt: "Trompette"
     },
     {
       id: 33,
       imgSrc: Img33,
+      alt: "Tropiques"
     },
     {
       id: 34,
       imgSrc: Img34,
+      alt: "Violon | Matisse"
     },
     {
       id: 35,
       imgSrc: Img35,
+      alt: "Vitrail"
     },
     {
       id: 36,
       imgSrc: Img36,
+      alt: "Vue de Tanger"
     },
     {
       id: 37,
@@ -221,8 +257,9 @@ const Huile = () => {
               <img
                 src={item.imgSrc}
                 style={{ width: "100%" }}
-                alt="pierre Dabadie"
+                alt={item.alt}
               />
+              <p>{item.alt}</p>
             </div>
           );
         })}
