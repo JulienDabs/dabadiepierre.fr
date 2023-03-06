@@ -26,6 +26,45 @@ body{
     filter:opacity(.4);
 }
 
+.alt-text-legend {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+
+  .alt-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.582);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+  .submenu {
+    display: none;
+  }
+
+  .submenu:hover{
+    display: block;
+  }
+
 @media (max-width: 991px){
     .gallery{
         -webkit-column-count: 2;

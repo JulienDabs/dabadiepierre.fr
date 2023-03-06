@@ -5,7 +5,7 @@ import Img1 from "./img/Amazone au perroquet.jpg";
 import Img2 from "./img/Amazone.jpg";
 import Img3 from "./img/Blonde.jpg";
 import Img4 from "./img/Cat Woman.jpg";
-import Img5 from "./img/Coup de Soleil.jpg";
+import Img5 from "./img/Coup_de_Soleil.jpg";
 import Img6 from "./img/cuba.jpg";
 import Img7 from "./img/Désert.jpg";
 import Img8 from "./img/femme à la rose.jpg";
@@ -23,9 +23,8 @@ import Img19 from "./img/NY at night.jpg";
 import Img20 from "./img/Pont NY.jpg";
 import Img21 from "./img/Québec Girl.jpg";
 import Img22 from "./img/Royan.jpg";
-import Img23 from "./img/Station Service US.jpg";
-import Img24 from "./img/Texas.jpg";
-import Img25 from "./img/Vespa.jpg";
+import Img23 from "./img/Texas.jpg";
+import Img24 from "./img/Vespa.jpg";
 
 
 const Today = () => {
@@ -38,99 +37,119 @@ const Today = () => {
     {
       id: 2,
       imgSrc: Img2,
+      alt:"L'amazone"
     },
     {
       id: 3,
       imgSrc: Img3,
+      alt:"Blonde Pop Art"
     },
     {
       id: 4,
       imgSrc: Img4,
+      alt: "Catwoman"
     },
     {
       id: 5,
       imgSrc: Img5,
+      alt:"Coup de Soleil"
     },
     {
       id: 6,
       imgSrc: Img6,
+      alt:"Cuba"
     },
     {
       id: 7,
       imgSrc: Img7,
+      alt:"Désert"
     },
     {
       id: 8,
       imgSrc: Img8,
+      alt:"Femme à la rose"
     },
     {
       id: 9,
       imgSrc: Img9,
+      alt:"Femme au parfum"
     },
     {
       id: 10,
       imgSrc: Img10,
+      alt:"Fraise"
     },
     {
       id: 11,
       imgSrc: Img11,
+      alt:"Gas Station"
     },
     {
       id: 12,
       imgSrc: Img12,
+      alt:"Gas Station 2"
     },
     {
       id: 13,
       imgSrc: Img13,
+      alt:"Italie"
     },
     {
       id: 14,
       imgSrc: Img14,
+      alt:"La Havane"
     },
     {
       id: 15,
       imgSrc: Img15,
+      alt: "Le Mont-Salva"
     },
     {
       id: 16,
       imgSrc: Img16,
+      alt:"Le port du Brusc"
     },
     {
       id: 17,
       imgSrc: Img17,
+      alt:"Le Mont-Salva 2"
     },
     {
       id: 18,
       imgSrc: Img18,
+      alt:"Mont-Tremblant"
     },
     {
       id: 19,
       imgSrc: Img19,
+      alt:"NYC la nuit"
     },
     {
       id: 20,
       imgSrc: Img20,
+      alt:"Pont NYC"
     },
     {
       id: 21,
       imgSrc: Img21,
+      alt:"Québec Girl"
     },
     {
       id: 22,
       imgSrc: Img22,
+      alt:"Royan"
     },
     {
       id: 23,
       imgSrc: Img23,
+      alt:"Texas"
     },
     {
       id: 24,
       imgSrc: Img24,
+      alt:"Vespa"
     },
-    {
-      id: 25,
-      imgSrc: Img25,
-    },
+    
    
     
     

@@ -41,31 +41,35 @@ class NavBar extends Component {
                   <ul id="navbar" className={this.state.clicked ? "#navbar active":"#navbar"}>
                       <li>
                           <NavLink to="/">Accueil</NavLink>
+                            <ul className="submenu">
+                                <li>
+                                    <NavLink to="/Huile">Huile</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to ="/Aerographe">Aérographe</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to ="/Animaux">Animaux</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to = "/Contemporain">Contemporain</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to = "/Japon">Japon</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to ="/Today">Aujourd'hui</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to ="/Rouleau">Rouleau</NavLink>
+                                </li>
+                            </ul>
                       </li>
-                      <li>
-                          <NavLink to="/Huile">Huile</NavLink>
-                      </li>
-                      <li>
-                          <NavLink to ="/Aerographe">Aérographe</NavLink>
-                      </li>
-                      <li>
-                          <NavLink to ="/Animaux">Animaux</NavLink>
-                      </li>
-                      <li>
-                          <NavLink to = "/Contemporain">Contemporain</NavLink>
-                      </li>
-                      <li>
-                          <NavLink to = "/Japon">Japon</NavLink>
-                      </li>
-                      <li>
-                          <NavLink to ="/Today">Aujourd'hui</NavLink>
-                      </li>
+                     
                       <li>
                           <NavLink to ="/Biographie">Biographie</NavLink>
                       </li>
-                      <li>
-                          <NavLink to ="/Rouleau">Rouleau</NavLink>
-                      </li>
+                      
                   </ul>
               </div>
               <div id="mobile" onClick={this.handleClick}>

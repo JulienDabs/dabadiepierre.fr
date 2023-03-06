@@ -17,46 +17,57 @@ const Home = () => {
     {
       id: 1,
       imgSrc: Img1,
+      alt:"Negresco"
     },
     {
       id: 2,
       imgSrc: Img2,
+      alt:"Port du Brusc"
     },
     {
       id: 3,
       imgSrc: Img3,
+      alt:"Main d'enfant"
     },
     {
       id: 4,
       imgSrc: Img4,
+      alt:"Mont-Salva"
     },
     {
       id: 5,
       imgSrc: Img5,
+      alt:"Mont-Tremblant"
     },
     {
       id: 6,
       imgSrc: Img6,
+      alt:"NYC la nuit"
     },
     {
       id: 7,
       imgSrc: Img7,
+      alt:"Oursins & Citrons"
     },
     {
       id: 8,
       imgSrc: Img8,
+      alt:"Rhum"
     },
     {
       id: 9,
       imgSrc: Img9,
+      alt:"Vespa"
     },
     
   ];
 
   const [model, setModel] = useState(false);
   const [tempimgSrc, SetTempImgSrc] = useState("");
-  const getImg = (imgSrc) => {
+  const [tempimgAlt, SetTempImgAlt] = useState("");
+  const getImg = (imgSrc, alt) => {
     SetTempImgSrc(imgSrc);
+    SetTempImgAlt(alt);
     setModel(true);
   };
   return (
@@ -64,7 +75,8 @@ const Home = () => {
     <h1 style={{ textAlign: "center" }}>Pierre Dabadie</h1>
     <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
       <div className={model ? "model open" : "model"}>
-        <img src={tempimgSrc} alt="pierre Dabadie" />
+        <img src={tempimgSrc} alt={tempimgAlt} />
+        <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
       </div>
       <div className="gallery">
@@ -73,13 +85,14 @@ const Home = () => {
             <div
               className="pics"
               key={index}
-              onClick={() => getImg(item.imgSrc)}
+              onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
                 src={item.imgSrc}
                 style={{ width: "100%" }}
-                alt="pierre Dabadie"
+                alt={item.alt}
               />
+              <p className="alt-text">{item.alt}</p>
             </div>
           );
         })}
