@@ -40,7 +40,7 @@ class NavBar extends Component {
               <div>
                   <ul id="navbar" className={this.state.clicked ? "#navbar active":"#navbar"}>
                       <li>
-                          <NavLink className="active" to="/">Accueil</NavLink>
+                          <NavLink to="/">Accueil</NavLink>
                       </li>
                       <li>
                           <NavLink to="/Huile">Huile</NavLink>
@@ -62,6 +62,9 @@ class NavBar extends Component {
                       </li>
                       <li>
                           <NavLink to ="/Biographie">Biographie</NavLink>
+                      </li>
+                      <li>
+                          <NavLink to ="/Rouleau">Rouleau</NavLink>
                       </li>
                   </ul>
               </div>

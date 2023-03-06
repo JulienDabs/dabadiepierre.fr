@@ -15,42 +15,52 @@ const Contemporain = () => {
     {
       id: 1,
       imgSrc: Img1,
+      alt:"Café des bains | Royan"
     },
     {
       id: 2,
       imgSrc: Img2,
+      alt:"Cannes"
     },
     {
       id: 3,
       imgSrc: Img3,
+      alt:"Femme bleue"
     },
     {
       id: 4,
       imgSrc: Img4,
+      alt:"Gerbe d'eau"
     },
     {
       id: 5,
       imgSrc: Img5,
+      alt:"Main d'enfant"
     },
     {
       id: 6,
       imgSrc: Img6,
+      alt:"Piscine californienne"
     },
     {
       id: 7,
       imgSrc: Img7,
+      alt: "Port de Sanary"
     },
     {
       id: 8,
       imgSrc: Img8,
+      alt: "Sanary"
     },
     
     
   ];
   const [model, setModel] = useState(false);
   const [tempimgSrc, SetTempImgSrc] = useState("");
-  const getImg = (imgSrc) => {
+  const [tempimgAlt, SetTempImgAlt] = useState("");
+  const getImg = (imgSrc, alt) => {
     SetTempImgSrc(imgSrc);
+    SetTempImgAlt(alt)
     setModel(true);
   };
   return (
@@ -58,7 +68,8 @@ const Contemporain = () => {
     <h1 style={{ textAlign: "center" }}>Pierre Dabadie</h1>
     <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
       <div className={model ? "model open" : "model"}>
-        <img src={tempimgSrc} alt="pierre Dabadie" />
+        <img src={tempimgSrc} alt={tempimgAlt} />
+        <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
       </div>
       <div className="gallery">
@@ -67,13 +78,14 @@ const Contemporain = () => {
             <div
               className="pics"
               key={index}
-              onClick={() => getImg(item.imgSrc)}
+              onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
                 src={item.imgSrc}
                 style={{ width: "100%" }}
-                alt="pierre Dabadie"
+                alt={item.alt}
               />
+              <p className="alt-text">{item.alt}</p>
             </div>
           );
         })}

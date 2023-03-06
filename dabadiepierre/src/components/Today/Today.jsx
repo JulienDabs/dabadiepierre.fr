@@ -3,30 +3,29 @@ import "./today.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/Amazone au perroquet.jpg";
 import Img2 from "./img/Amazone.jpg";
-import Img3 from "./img/bain turc ingres.jpg";
-import Img4 from "./img/Blonde.jpg";
-import Img5 from "./img/Cat Woman.jpg";
-import Img6 from "./img/Coup de Soleil.jpg";
-import Img7 from "./img/cuba.jpg";
-import Img8 from "./img/Désert.jpg";
-import Img9 from "./img/femme à la rose.jpg";
-import Img10 from "./img/Femme au parfum.jpg";
-import Img11 from "./img/Fraise.jpg";
-import Img12 from "./img/Gas Station (2).jpg";
-import Img13 from "./img/Gas station.jpg";
-import Img14 from "./img/Italie.jpg";
-import Img15 from "./img/La Havane.jpg";
-import Img16 from "./img/Le Mont Salva.jpg";
-import Img17 from "./img/Le Port du Brusc.jpg";
-import Img18 from "./img/Mont SALVA (2).jpg";
-import Img19 from "./img/Mont Tremblant.jpg";
-import Img20 from "./img/NY at night.jpg";
-import Img21 from "./img/Pont NY.jpg";
-import Img22 from "./img/Québec Girl.jpg";
-import Img23 from "./img/Royan.jpg";
-import Img24 from "./img/Station Service US.jpg";
-import Img25 from "./img/Texas.jpg";
-import Img26 from "./img/Vespa.jpg";
+import Img3 from "./img/Blonde.jpg";
+import Img4 from "./img/Cat Woman.jpg";
+import Img5 from "./img/Coup de Soleil.jpg";
+import Img6 from "./img/cuba.jpg";
+import Img7 from "./img/Désert.jpg";
+import Img8 from "./img/femme à la rose.jpg";
+import Img9 from "./img/Femme au parfum.jpg";
+import Img10 from "./img/Fraise.jpg";
+import Img11 from "./img/Gas Station (2).jpg";
+import Img12 from "./img/Gas station.jpg";
+import Img13 from "./img/Italie.jpg";
+import Img14 from "./img/La Havane.jpg";
+import Img15 from "./img/Le Mont Salva.jpg";
+import Img16 from "./img/Le Port du Brusc.jpg";
+import Img17 from "./img/Mont SALVA (2).jpg";
+import Img18 from "./img/Mont Tremblant.jpg";
+import Img19 from "./img/NY at night.jpg";
+import Img20 from "./img/Pont NY.jpg";
+import Img21 from "./img/Québec Girl.jpg";
+import Img22 from "./img/Royan.jpg";
+import Img23 from "./img/Station Service US.jpg";
+import Img24 from "./img/Texas.jpg";
+import Img25 from "./img/Vespa.jpg";
 
 
 const Today = () => {
@@ -34,6 +33,7 @@ const Today = () => {
     {
       id: 1,
       imgSrc: Img1,
+      alt:"Amazone au perroquet"
     },
     {
       id: 2,
@@ -131,17 +131,16 @@ const Today = () => {
       id: 25,
       imgSrc: Img25,
     },
-    {
-      id: 26,
-      imgSrc: Img26,
-    },
+   
     
     
   ];
   const [model, setModel] = useState(false);
   const [tempimgSrc, SetTempImgSrc] = useState("");
-  const getImg = (imgSrc) => {
+  const [tempimgAlt, SetTempImgAlt] = useState("");
+  const getImg = (imgSrc, alt) => {
     SetTempImgSrc(imgSrc);
+    SetTempImgAlt(alt);
     setModel(true);
   };
   return (
@@ -149,7 +148,8 @@ const Today = () => {
     <h1 style={{ textAlign: "center" }}>Pierre Dabadie</h1>
     <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
       <div className={model ? "model open" : "model"}>
-        <img src={tempimgSrc} alt="pierre Dabadie" />
+        <img src={tempimgSrc} alt={tempimgAlt} />
+        <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
       </div>
       <div className="gallery">
@@ -158,13 +158,14 @@ const Today = () => {
             <div
               className="pics"
               key={index}
-              onClick={() => getImg(item.imgSrc)}
+              onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
                 src={item.imgSrc}
                 style={{ width: "100%" }}
-                alt="pierre Dabadie"
+                alt={item.alt}
               />
+              <p className="alt-text">{item.alt}</p>
             </div>
           );
         })}
