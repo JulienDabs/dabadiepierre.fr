@@ -24,24 +24,41 @@ const App = () => (
 
 );
 
-//I wasn't able to place the navbar into another filegit 
+//I wasn't able to place the navbar into another file 
 
 class NavBar extends Component {
-  state = {clicked : false}
-  handleClick = () => {
-      this.setState({clicked: !this.state.clicked})
-  }
+    constructor(props) {
+      super(props);
+      this.state = {
+        clicked: false,
+        showSubmenu: false // added state to control visibility of submenu
+      };
+    }
+  
+    handleClick = () => {
+      this.setState({ clicked: !this.state.clicked });
+    };
+  
+    handleMouseEnter = () => {
+        this.setState({ showSubmenu: true });
+      };
+    
+      handleMouseLeave = () => {
+        this.setState({ showSubmenu: false });
+      };
   render() {
   
       return (
              
           <nav>
-              <NavLink to ="/">PierreDabadie.fr</NavLink>
+              <NavLink to ="/"><i class="fa fa-home" aria-hidden="true"></i></NavLink>
               <div>
-                  <ul id="navbar" className={this.state.clicked ? "#navbar active":"#navbar"}>
+                  <ul 
+                  id="navbar" className={this.state.clicked ? "#navbar active":"#navbar"} 
+                  onMouseLeave={this.handleMouseLeave}>
                       <li>
-                          <NavLink to="/">Accueil</NavLink>
-                            <ul className="submenu">
+                          <NavLink to="/" onMouseEnter={this.handleMouseEnter}>Les styles</NavLink>
+                            <ul className={this.state.showSubmenu ? 'visible' : 'submenu'}>
                                 <li>
                                     <NavLink to="/Huile">Huile</NavLink>
                                 </li>

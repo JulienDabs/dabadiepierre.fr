@@ -57,13 +57,7 @@ body{
     transition: opacity 0.5s;
     opacity: 1;
   }
-  .submenu {
-    display: none;
-  }
-
-  .submenu:hover{
-    display: block;
-  }
+ 
 
 @media (max-width: 991px){
     .gallery{

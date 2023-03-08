@@ -4,36 +4,59 @@ nav {
     justify-content: space-between;
     background-color: rgba(17, 20, 214, 0.527);
     padding: 20px 80px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-}
-
-#navbar{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    max-width: 100%;
+    position: relative;
+    height: 20px;
+  }
+  
+  #navbar {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    position: relative;
+  }
 
-#navbar li{
+  #navbar li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.836);
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+    transition: opacity 0.s ease-in-out, visibility 0.4s ease-in-out;
+  }
+  
+  #navbar li:hover ul {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  #navbar li {
     list-style: none;
     padding: 0 20px;
     position: relative;
-}
-
-#navbar li a{
+  }
+  
+  #navbar li a {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 600;
     color: white;
     transition: 0.3s ease-in-out;
-}
-
-#navbar li a:hover,
-#navbar li a.active{
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.active {
     color: cornflowerblue;
-}
-
-#navbar li a:hover::after,
-#navbar li a.active::after{
+  }
+  
+  #navbar li a:hover::after,
+  #navbar li a.active::after {
     content: "";
     width: 30%;
     height: 2px;
@@ -41,41 +64,118 @@ nav {
     position: absolute;
     bottom: -4px;
     left: 20px;
-}
-#mobile{
+  }
+  
+  #mobile {
     display: none;
-}
-#mobile i{
+  }
+  
+  #mobile i {
     color: white;
-}
-
-@media screen and (max-width:769px) {
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 48px;
-        right: -300px;
-        width: 300px;
-        height: 100vh;
-        background-color: rgba(9, 95, 224, 0.719) ;
-        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
-        padding: 40px 0 0 10px;
-        transition: 0.3s ease-in-out;
+  }
+  
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+  
+  .visible {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  @media screen and (max-width: 769px) {
+    #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 48px;
+    right: -467px;
+    width: 300px;
+    height: 100vh;
+    background-color: rgb(9, 95, 224);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
     }
     #navbar.active{
-        right: 0px;
+    right: -162px;
+    z-index: 1;
     }
     #navbar li{
-        margin-bottom: 25px;
+    margin-bottom: 25px;
     }
     #mobile{
-        display: inline-flex;
+    display: inline-flex;
     }
     #mobile i {
-        font-size: 24px;
-        cursor: pointer;
+    font-size: 24px;
+    cursor: pointer;
     }
-}
+    #navbar li:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    }
+    .submenu {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-20px);
+    }
+    .submenu a {
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    }
+    }
+    
+    /* Media Query for Tablets */
+    @media screen and (max-width: 1025px) {
+    #navbar {
+    padding: 20px 40px;
+    }
+    #navbar li {
+    padding: 0 15px;
+    }
+    #navbar li a {
+    font-size: 1.1rem;
+    }
+    #navbar li a:hover::after,
+    #navbar li a.active::after {
+    width: 50%;
+    }
+    }
+    
+    /* Media Query for Desktops */
+    @media screen and (min-width: 1026px) {
+    #navbar {
+    padding: 20px 80px;
+    }
+    #navbar li {
+    padding: 0 20px;
+    }
+    #navbar li a {
+    font-size: 1.3rem;
+    }
+    #navbar li a:hover::after,
+    #navbar li a.active::after {
+    width: 30%;
+    }
+    }
