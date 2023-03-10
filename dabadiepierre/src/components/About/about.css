@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Freehand');
+ 
+ .bio {
+    display: flex;
+} 
+
+#bio-pic {
+    width: 50%;
+    height: 50%;
+    padding: 2rem;
+    
+   
+}
+
+.bio-intro{
+    width: 50%;
+    color: white;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;  
+   
+}
+
+.bio-intro-title {
+    text-align: center;
+    font-family: 'Freehand', cursive;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 768px){
+
+    .bio {
+        display: block;
+    } 
+    
+    #bio-pic {
+        width: 92%;
+        height: 50%;
+        /* padding: 2rem; */
+        
+       
+    }
+    
+    .bio-intro{
+        width: auto;
+        color: white;
+        padding: 1rem;
+        font-family: 'Roboto', sans-serif;  
+       
+    }
+
+    
+}
+
+@media screen and (min-width: 1026px) {
+    .bio {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    #bio-pic {
+        width: 20%;
+        height: 50%;
+        /* padding: 2rem; */
+          
+    }
+
+    .bio-intro{
+    color: white;
+    margin-left: 17rem;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    } 
+       
+}
+
+
+    

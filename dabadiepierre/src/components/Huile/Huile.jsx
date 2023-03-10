@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./huile.css";
+import "../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/alderney.jpg";
 import Img2 from "./img/antilles.jpg";
@@ -26,7 +26,7 @@ import Img22 from "./img/maqueraux.jpg";
 import Img23 from "./img/martinique.jpg";
 import Img24 from "./img/oliviers.jpg";
 import Img25 from "./img/oranges très orange.jpg";
-import Img26 from "./img/piscine tunisienne.jpg";
+
 import Img27 from "./img/Poet duBrusc.jpg";
 import Img28 from "./img/Port en Méditerrannée.jpg";
 import Img29 from "./img/Rhum.jpg";
@@ -168,11 +168,7 @@ const Huile = () => {
       imgSrc: Img25,
       alt: "Oranges"
     },
-    {
-      id: 26,
-      imgSrc: Img26,
-      alt: "Piscine tunisienne"
-    },
+    
     {
       id: 27,
       imgSrc: Img27,
@@ -237,9 +233,8 @@ const Huile = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>La peinture à l'huile et acrylique</h1>
-    <h2 style={{ textAlign: "center" }}>Pierre Dabadie, Artiste Peintre</h2>
-      <div className={model ? "model open" : "model"}>
+    <h1 className="main-intro">La peinture à l'huile et acrylique</h1>
+          <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={tempimgAlt} />
         <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
@@ -253,6 +248,7 @@ const Huile = () => {
               onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
+                className="picture-style"
                 src={item.imgSrc}
                 style={{ width: "100%" }}
                 alt={item.alt}

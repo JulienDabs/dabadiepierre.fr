@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./rouleau.css";
+import "../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/baie des anges.jpg";
 import Img2 from "./img/p.jpg";
@@ -67,9 +67,8 @@ const Rouleau = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>Pierre Dabadie</h1>
-    <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
-      <div className={model ? "model open" : "model"}>
+    <h1 className="main-intro">La peinture au rouleau</h1>
+          <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={tempimgAlt} />
         <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />

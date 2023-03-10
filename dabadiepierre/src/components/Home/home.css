@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Freehand');
+
 body{
     background-color: black;
-    color: rgba(36, 52, 194, 0.788);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ff5e00;
+    font-family: 'Nunito',sans-serif;
 }
+
+.main-intro {
+    text-align: center;
+    color: cornsilk;
+    font-family: 'Nunito',sans-serif;
+}
+
+.main-intro-title {
+    font-family: 'Freehand';
+    font-size: 7rem;
+    margin-bottom: -8px;
+}
+.signature {
+    width: 90%;
+}
+
+.picture-style {
+    border-radius: 18% 0;
+}
+
 
 .gallery{
     -webkit-column-count: 3;
@@ -22,42 +45,47 @@ body{
     margin-bottom: 12px;
 }
 
+.pics {
+    border-radius: 50%;
+}
+
 .gallery .pics:hover{
     filter:opacity(.4);
 }
 
-.alt-text-legend {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 18px;
-    padding: 5px;
-    margin: 0;
-    opacity: 0;
-    transition: opacity 0.5s;
-    opacity: 1;
-  }
-
-  .alt-text {
-    position: absolute;
+ .alt-text {
+    position:relative; 
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.582);
-    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.726);
+    color: rgba(255, 248, 220, 0.74);
     text-align: center;
     font-size: 18px;
     padding: 5px;
-    margin: 0;
+    margin-top: -40px;
     opacity: 0;
     transition: opacity 0.5s;
     opacity: 1;
-  }
- 
+    font-weight: bolder;
+    
+  } 
+  
+  .alt-text-legend {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      background-color: rgb(0, 0, 0);
+      color: cornsilk;
+      text-align: center;
+      font-size: 18px;
+      padding: 5px;
+      margin: 0;
+      opacity: 0;
+      transition: opacity 0.5s;
+      opacity: 1;
+    }
 
 @media (max-width: 991px){
     .gallery{
@@ -65,6 +93,9 @@ body{
         -moz-column-count: 2;
         column-count: 2;
         
+    }
+    .main-intro-title {
+        font-size: 3rem;
     }  
 }
 
@@ -126,3 +157,16 @@ body{
     color: white;
     cursor: pointer;
 }
+
+
+@media (max-width: 375px){
+    
+    .signature {
+    width: 49%;
+    position: absolute;
+    bottom: 11px;
+    right: 151px;
+}
+}
+
+

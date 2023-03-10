@@ -2,7 +2,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(17, 20, 214, 0.527);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, #ff5e00 100%);
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     max-width: 100%;
@@ -52,7 +53,7 @@ nav {
   
   #navbar li a:hover,
   #navbar li a.active {
-    color: cornflowerblue;
+    color: cornsilk;
   }
   
   #navbar li a:hover::after,
@@ -60,7 +61,7 @@ nav {
     content: "";
     width: 30%;
     height: 2px;
-    background-color: cornflowerblue;
+    background-color: cornsilk;
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -93,6 +94,9 @@ nav {
   }
   
   @media screen and (max-width: 769px) {
+    nav {
+      width: auto;
+    }
     #navbar {
     display: flex;
     flex-direction: column;
@@ -103,8 +107,9 @@ nav {
     right: -467px;
     width: 300px;
     height: 100vh;
-    background-color: rgb(9, 95, 224);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, #ff5e00 0%, #000000 100%);
+    box-shadow: 0 40px 60px rgb(0, 0, 0);
     padding: 40px 0 0 10px;
     transition: 0.3s ease-in-out;
     }

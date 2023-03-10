@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./animaux.css";
+// import "./animaux.css";
+import "../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/Baleine.jpg";
 import Img2 from "./img/Banc de Saupes Sculpture bois.jpg";
@@ -79,9 +80,8 @@ const Animaux = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>Les Animaux</h1>
-    <h2 style={{ textAlign: "center" }}>Pierre Dabadie, Artiste Peintre</h2>
-      <div className={model ? "model open" : "model"}>
+    <h1 className="main-intro">Les Animaux</h1>
+          <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={tempimgAlt} />
         <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
@@ -95,6 +95,7 @@ const Animaux = () => {
               onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
+                className="picture-style"
                 src={item.imgSrc}
                 style={{ width: "100%" }}
                 alt={item.alt}

@@ -11,6 +11,8 @@ import Japon from './components/Japon/Japon';
 import Contemporain from './components/Contemporain/Contemporain';
 import Huile from './components/Huile/Huile';
 import Today from "./components/Today/Today";
+import Footer from "./components/Footer/Footer";
+import NavPic from "./nav bar pic/dabadie.fr.png"
 
 
 const App = () => (
@@ -18,6 +20,7 @@ const App = () => (
     
     <NavBar />
     <Main />
+    <Footer />
     
     
   </div>
@@ -36,6 +39,9 @@ class NavBar extends Component {
     }
   
     handleClick = () => {
+      if (window.innerWidth <= 768) {
+        this.setState({ clicked: false });
+      }
       this.setState({ clicked: !this.state.clicked });
     };
   
@@ -51,40 +57,41 @@ class NavBar extends Component {
       return (
              
           <nav>
-              <NavLink to ="/"><i class="fa fa-home" aria-hidden="true"></i></NavLink>
+              <NavLink to ="/"><img className="signature" src={NavPic} alt="Pierre Dabadie"/></NavLink>
               <div>
                   <ul 
                   id="navbar" className={this.state.clicked ? "#navbar active":"#navbar"} 
-                  onMouseLeave={this.handleMouseLeave}>
+                  onMouseLeave={this.handleMouseLeave}
+                  onClick={this.handleLinkClick}>
                       <li>
-                          <NavLink to="/" onMouseEnter={this.handleMouseEnter}>Les styles</NavLink>
+                          <NavLink to="/" onMouseEnter={this.handleMouseEnter}>Les périodes</NavLink>
                             <ul className={this.state.showSubmenu ? 'visible' : 'submenu'}>
                                 <li>
-                                    <NavLink to="/Huile">Huile</NavLink>
+                                    <NavLink to="/Huile" onClick={this.handleLinkClick}>Huile</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to ="/Aerographe">Aérographe</NavLink>
+                                    <NavLink to ="/Aerographe" onClick={this.handleLinkClick}>Aérographe</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to ="/Animaux">Animaux</NavLink>
+                                    <NavLink to ="/Animaux" onClick={this.handleLinkClick}>Animaux</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to = "/Contemporain">Contemporain</NavLink>
+                                    <NavLink to = "/Contemporain" onClick={this.handleLinkClick}>Contemporain</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to = "/Japon">Japon</NavLink>
+                                    <NavLink to = "/Japon" onClick={this.handleLinkClick}>Japon</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to ="/Today">Aujourd'hui</NavLink>
+                                    <NavLink to ="/Today" onClick={this.handleLinkClick}>Aujourd'hui</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to ="/Rouleau">Rouleau</NavLink>
+                                    <NavLink to ="/Rouleau" onClick={this.handleLinkClick}>Rouleau</NavLink>
                                 </li>
                             </ul>
                       </li>
                      
                       <li>
-                          <NavLink to ="/Biographie">Biographie</NavLink>
+                          <NavLink to ="/Biographie" onClick={this.handleLinkClick}>Biographie</NavLink>
                       </li>
                       
                   </ul>

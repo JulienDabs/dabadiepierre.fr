@@ -72,8 +72,11 @@ const Home = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>Pierre Dabadie</h1>
-    <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
+    <div className="main-intro">
+      <h1 className="main-intro-title">Pierre Dabadie</h1>
+      <h2>Artiste Peintre</h2>
+      <h3>Une évolution au fil du temps</h3>
+    </div>
       <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={tempimgAlt} />
         <p className="alt-text-legend">{tempimgAlt}</p>

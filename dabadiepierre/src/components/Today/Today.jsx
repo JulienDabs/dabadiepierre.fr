@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import "./today.css";
+import "../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/Amazone au perroquet.jpg";
 import Img2 from "./img/Amazone.jpg";
 import Img3 from "./img/Blonde.jpg";
 import Img4 from "./img/Cat Woman.jpg";
 import Img5 from "./img/Coup_de_Soleil.jpg";
-import Img6 from "./img/cuba.jpg";
-import Img7 from "./img/Désert.jpg";
 import Img8 from "./img/femme à la rose.jpg";
 import Img9 from "./img/Femme au parfum.jpg";
 import Img10 from "./img/Fraise.jpg";
@@ -54,16 +52,8 @@ const Today = () => {
       imgSrc: Img5,
       alt:"Coup de Soleil"
     },
-    {
-      id: 6,
-      imgSrc: Img6,
-      alt:"Cuba"
-    },
-    {
-      id: 7,
-      imgSrc: Img7,
-      alt:"Désert"
-    },
+    
+    
     {
       id: 8,
       imgSrc: Img8,
@@ -164,9 +154,8 @@ const Today = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>Pierre Dabadie</h1>
-    <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
-      <div className={model ? "model open" : "model"}>
+    <h1 className="main-intro">Aujourd'hui</h1>
+         <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={tempimgAlt} />
         <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
@@ -180,6 +169,7 @@ const Today = () => {
               onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
+                className="picture-style"
                 src={item.imgSrc}
                 style={{ width: "100%" }}
                 alt={item.alt}

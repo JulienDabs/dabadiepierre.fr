@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./aerographe.css";
+import "../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/caro pop art 2008.jpg";
 import Img2 from "./img/coup de soleil.jpg";
@@ -83,9 +83,8 @@ const Aerographe = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>L'aérographe, la Passion</h1>
-    <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
-      <div className={model ? "model open" : "model"}>
+    <h1 className="main-intro">Aérographie</h1>
+          <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={tempimgAlt} />
         <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
@@ -99,6 +98,7 @@ const Aerographe = () => {
               onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
+                className="picture-style"
                 src={item.imgSrc}
                 style={{ width: "100%" }}
                 alt={item.alt}

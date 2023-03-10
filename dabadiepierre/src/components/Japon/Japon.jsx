@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./japon.css";
+import "../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/La Vague.jpg";
 import Img2 from "./img/Nuit glaciale.jpg";
@@ -51,9 +51,8 @@ const Japon = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>La période Japon (reproductions)</h1>
-    <h2 style={{ textAlign: "center" }}>Pierre Dabadie, artiste Peintre</h2>
-      <div className={model ? "model open" : "model"}>
+    <h1 className="main-intro">La période Japon (reproductions)</h1>
+         <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={tempimgAlt} />
         <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
@@ -67,6 +66,7 @@ const Japon = () => {
               onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
+                className="picture-style"
                 src={item.imgSrc}
                 style={{ width: "100%" }}
                 alt={item.alt}

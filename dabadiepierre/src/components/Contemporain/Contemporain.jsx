@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./contemporain.css";
+import "../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Img1 from "./img/café des bains ROYAN.jpg";
 import Img2 from "./img/Cannes.jpg";
@@ -65,9 +65,8 @@ const Contemporain = () => {
   };
   return (
     <>
-    <h1 style={{ textAlign: "center" }}>Pierre Dabadie</h1>
-    <h2 style={{ textAlign: "center" }}>Artiste Peintre</h2>
-      <div className={model ? "model open" : "model"}>
+    <h1 className="main-intro">Comtemporain</h1>
+       <div className={model ? "model open" : "model"}>
         <img src={tempimgSrc} alt={tempimgAlt} />
         <p className="alt-text-legend">{tempimgAlt}</p>
         <CloseIcon onClick={() => setModel(false)} />
@@ -81,6 +80,7 @@ const Contemporain = () => {
               onClick={() => getImg(item.imgSrc, item.alt)}
             >
               <img
+                className="picture-style"
                 src={item.imgSrc}
                 style={{ width: "100%" }}
                 alt={item.alt}

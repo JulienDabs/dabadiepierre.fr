@@ -1,0 +1,22 @@
+.footer {
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    
+}
+
+.footer-title {
+    font-weight: bolder;
+    color: cornsilk;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    scale: 2rem;
+}
+
