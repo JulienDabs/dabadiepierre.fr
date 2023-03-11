@@ -23,6 +23,7 @@ import Img21 from "./img/Québec Girl.jpg";
 import Img22 from "./img/Royan.jpg";
 import Img23 from "./img/Texas.jpg";
 import Img24 from "./img/Vespa.jpg";
+import Img25 from "./img/Gold Cup.jpg"
 
 
 const Today = () => {
@@ -138,6 +139,11 @@ const Today = () => {
       id: 24,
       imgSrc: Img24,
       alt:"Vespa"
+    },
+    {
+      id: 25,
+      imgSrc: Img25,
+      alt:"Gold Cup"
     },
     
    

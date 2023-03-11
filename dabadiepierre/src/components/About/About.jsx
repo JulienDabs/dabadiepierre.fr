@@ -4,16 +4,20 @@ import "./about.css";
 
 const Bio = () => {
   return (
+    <>
     <div className='bio'>
       <div className='bio-intro'>
       <h1 className='bio-intro-title'>Pierre Dabadie</h1>
-      <p>Pierre Dabadie était un peintre français connu pour ses paysages colorés et vifs et ses peintures de nature morte. Il est né à Alger, Algérie au début du XXe siècle et a étudié l'art à l'École des Beaux-Arts de Paris. Tout au long de sa carrière, Dabadie s'est inspiré de la beauté du monde naturel et a souvent cherché à capturer la majesté de la campagne française dans ses peintures.</p>
-      <p>Le style de Dabadie se caractérise par son utilisation de couleurs vives et audacieuses et sa capacité à transmettre un sens du mouvement et de la vie dans ses peintures. Il utilisait souvent des coups de pinceau épais et un style impressionniste souple pour transmettre l'énergie et le mouvement du monde naturel. Parmi ses œuvres les plus célèbres figurent "Printemps en Provence", "Paysage d'Auvergne" et "Nature morte aux fleurs".</p>
-
-      <p>Aujourd'hui, les peintures de Dabadie sont très recherchées par les collectionneurs d'art et les passionnés, et ses œuvres peuvent être trouvées dans des musées dans le monde entier.</p>
+      <p>Pierre DABADIE est un peintre français née à Alger en 1951</p>
+      <p>Formation : Autodidacte</p>
+      <p>Influences : Edward Hopper & David Hockney</p><br />
+      <p>Très tôt, il montre une aptitude pour le dessin, la peinture à l'huile par la suite l'acrylique, du pinçeau au rouleau et enfin au pistolet d'aérographe.</p>
+      <p>Il exerce son art sur tous supports en passant par les toiles puis casques de motos, vélos, murs où la couleur prime avec un parfait rendu des ombres et lumières.</p>
+      <p>Après 2 expositions et plusieurs concours de peinture (dont un premier prix à la Seyne/mer), de futurs projets sont en préparation pour les salons d'arts, concours et autres lieux d'art expo dans le Var.</p>
       </div>
       <img id='bio-pic' src={Img1} alt="Bio Pic" />
       </div>
+      </>
   );
 };
 
