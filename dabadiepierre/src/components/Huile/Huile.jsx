@@ -177,7 +177,7 @@ const Huile = () => {
     {
       id: 28,
       imgSrc: Img28,
-      alt: "Port en Méditarranée"
+      alt: "Port en Méditarranée (1er prix)"
     },
     {
       id: 29,

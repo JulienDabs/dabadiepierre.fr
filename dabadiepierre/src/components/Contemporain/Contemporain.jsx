@@ -45,7 +45,7 @@ const Contemporain = () => {
     {
       id: 7,
       imgSrc: Img7,
-      alt: "Port de Sanary"
+      alt: "Port de Sanary (1er prix)"
     },
     {
       id: 8,
