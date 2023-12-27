@@ -1,104 +1,61 @@
 import React, { useState } from "react";
 import "./home.css";
 import CloseIcon from "@mui/icons-material/Close";
-import Img1 from "./img/baie des anges.jpg";
-import Img2 from "./img/Le Port du Brusc.jpg";
-import Img3 from "./img/Main d'Enfant.jpg";
-import Img4 from "./img/Mont SALVA.jpg";
-import Img5 from "./img/Mont Tremblant.jpg";
-import Img6 from "./img/NY at night.jpg";
-import Img7 from "./img/Ousins et Citrons.jpg";
-import Img8 from "./img/Rhum.jpg";
-import Img9 from "./img/Vespa.jpg";
 
+// Dynamic image imports
+const imageNames = [
+  "baie des anges", "Le Port du Brusc", "Main d'Enfant", "Mont SALVA", 
+  "Mont Tremblant", "NY at night", "Ousins et Citrons", "Rhum", "Vespa"
+];
 
+const images = imageNames.reduce((acc, imgName) => {
+  acc[imgName] = require(`./img/${imgName.replace(/\s/g, '_')}.jpg`);
+  return acc;
+}, {});
+
+// GalleryItem Component
+const GalleryItem = ({ imgName, alt, onClick }) => (
+  <div className="pics" onClick={onClick}>
+    <img className="picture-style" src={images[imgName]} loading="lazy" style={{ width: "100%" }} alt={alt} />
+    <p className="alt-text">{alt}</p>
+  </div>
+);
+
+// Home Component
 const Home = () => {
-  let data = [
-    {
-      id: 1,
-      imgSrc: Img1,
-      alt:"Negresco"
-    },
-    {
-      id: 2,
-      imgSrc: Img2,
-      alt:"Port du Brusc"
-    },
-    {
-      id: 3,
-      imgSrc: Img3,
-      alt:"Main d'enfant"
-    },
-    {
-      id: 4,
-      imgSrc: Img4,
-      alt:"Mont-Salva"
-    },
-    {
-      id: 5,
-      imgSrc: Img5,
-      alt:"Mont-Tremblant"
-    },
-    {
-      id: 6,
-      imgSrc: Img6,
-      alt:"NYC la nuit"
-    },
-    {
-      id: 7,
-      imgSrc: Img7,
-      alt:"Oursins & Citrons"
-    },
-    {
-      id: 8,
-      imgSrc: Img8,
-      alt:"Rhum"
-    },
-    {
-      id: 9,
-      imgSrc: Img9,
-      alt:"Vespa"
-    },
-    
-  ];
+  const [model, setModel] = useState({ isOpen: false, imgSrc: "", imgAlt: "" });
 
-  const [model, setModel] = useState(false);
-  const [tempimgSrc, SetTempImgSrc] = useState("");
-  const [tempimgAlt, SetTempImgAlt] = useState("");
-  const getImg = (imgSrc, alt) => {
-    SetTempImgSrc(imgSrc);
-    SetTempImgAlt(alt);
-    setModel(true);
+  const getImg = (imgName, alt) => {
+    setModel({ isOpen: true, imgSrc: images[imgName], imgAlt: alt });
   };
+
+  let data = imageNames.map((name, index) => ({
+    id: index + 1,
+    imgName: name,
+    alt: name.replace(/_/g, ' ')  // Replace underscores with spaces for alt text
+  }));
+
   return (
     <>
-    <div className="main-intro">
-      <h1 className="main-intro-title">Pierre Dabadie</h1>
-      <h2>Artiste Peintre</h2>
-      <h3>Une évolution au fil du temps</h3>
-    </div>
-      <div className={model ? "model open" : "model"}>
-        <img src={tempimgSrc} alt={tempimgAlt} />
-        <p className="alt-text-legend">{tempimgAlt}</p>
-        <CloseIcon onClick={() => setModel(false)} />
+      <div className="main-intro">
+        <h1 className="main-intro-title">Pierre Dabadie</h1>
+        <h2>Artiste Peintre</h2>
+        <h3>Une évolution au fil du temps</h3>
+      </div>
+      <div className={model.isOpen ? "model open" : "model"}>
+        <img src={model.imgSrc} alt={model.imgAlt} />
+        <p className="alt-text-legend">{model.imgAlt}</p>
+        <CloseIcon onClick={() => setModel({ isOpen: false, imgSrc: "", imgAlt: "" })} />
       </div>
       <div className="gallery">
-        {data.map((item, index) => {
-          return (
-            <div
-              className="pics"
-              key={index}
-              onClick={() => getImg(item.imgSrc, item.alt)}
-            >
-              <img
-                src={item.imgSrc}
-                style={{ width: "100%" }}
-                alt={item.alt}
-              />
-              <p className="alt-text">{item.alt}</p>
-            </div>
-          );
-        })}
+        {data.map(item => (
+          <GalleryItem
+            key={item.id}
+            imgName={item.imgName}
+            alt={item.alt}
+            onClick={() => getImg(item.imgName, item.alt)}
+          />
+        ))}
       </div>
     </>
   );

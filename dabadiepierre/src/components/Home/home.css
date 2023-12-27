@@ -14,7 +14,7 @@ body{
 }
 
 .main-intro-title {
-    font-family: 'Freehand';
+    font-family: 'Freehand', 'Arial', sans-serif;
     font-size: 7rem;
     margin-bottom: -8px;
 }
