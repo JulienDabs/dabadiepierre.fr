@@ -176,6 +176,11 @@ body {
     margin-left: 4rem;
     text-align: justify;
 }
+.main-intro-title {
+  font-family: "Freehand", "Arial", sans-serif;
+  font-size: 4rem;
+  margin-bottom: -8px;
+}
 }
 
 @media (max-width: 480px) {
@@ -201,6 +206,11 @@ body {
     margin-left: 2rem;
     text-align: justify;
 }
+.main-intro-title {
+  font-family: "Freehand", "Arial", sans-serif;
+  font-size: 4rem;
+  margin-bottom: -8px;
+}
 }
 
 @media (max-width: 375px) {
@@ -225,6 +235,11 @@ body {
     width: 82%;
     margin-left: 2rem;
     text-align: justify;
+}
+.main-intro-title {
+  font-family: "Freehand", "Arial", sans-serif;
+  font-size: 2rem;
+  margin-bottom: -8px;
 }
 }
 
@@ -301,5 +316,10 @@ body {
     width: 70%;
     margin-left: 3rem;
     text-align: justify;
+}
+.main-intro-title {
+  font-family: "Freehand", "Arial", sans-serif;
+  font-size: 2rem;
+  margin-bottom: -8px;
 }
 }
