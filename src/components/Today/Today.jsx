@@ -42,7 +42,7 @@ const Today = () => {
     <>
       <h1 className="main-intro">Aujourd'hui</h1>
       <div className={model.isOpen ? "model open" : "model"}>
-        <img src={model.imgSrc} alt={model.imgAlt} />
+        <img src={model.imgSrc} alt={model.imgAlt} style={{ width: '100%', maxWidth: '1000px', height: 'auto' }}/>
         <p className="alt-text-legend">{model.imgAlt}</p>
         <CloseIcon onClick={() => setModel({ isOpen: false, imgSrc: "", imgAlt: "" })} />
       </div>

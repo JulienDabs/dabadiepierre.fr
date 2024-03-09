@@ -30,42 +30,61 @@ const App = () => (
 //I wasn't able to place the navbar into another file 
 
 class NavBar extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        clicked: false,
-        showSubmenu: false // added state to control visibility of submenu
-      };
-    }
-  
-    handleClick = () => {
-      if (window.innerWidth <= 768) {
-        this.setState({ clicked: false });
-      }
-      this.setState({ clicked: !this.state.clicked });
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicked: false,
+      showSubmenu: false
     };
-  
-    handleMouseEnter = () => {
-        this.setState({ showSubmenu: true });
-      };
-    
-      handleMouseLeave = () => {
-        this.setState({ showSubmenu: false });
-      };
+    this.navbarRef = React.createRef();
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', this.handleDocumentClick);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleDocumentClick);
+  }
+
+  handleDocumentClick = (event) => {
+    // If click was outside the navbar and the navbar is open, close it
+    if (this.navbarRef.current && !this.navbarRef.current.contains(event.target) && this.state.clicked) {
+      this.setState({ clicked: false });
+    }
+  };
+
+  handleClick = (event) => {
+    // Toggle the clicked state for mobile menu icon clicks
+    this.setState(prevState => ({ clicked: !prevState.clicked }));
+    event.preventDefault(); // Prevent default link action
+  };
+
+  toggleSubmenu = (event) => {
+    // Prevent the document click listener from closing the navbar
+    event.stopPropagation();
+    // Toggle submenu visibility
+    this.setState(prevState => ({ showSubmenu: !prevState.showSubmenu }));
+  };
+
+  handleLinkClick = () => {
+    // Close navbar when a link is clicked, useful for mobile
+    if (this.state.clicked) {
+      this.setState({ clicked: false });
+    }
+  };
   render() {
   
       return (
              
-          <nav>
+          <nav ref={this.navbarRef}>
               <NavLink to ="/"><img className="signature" src={NavPic} alt="Pierre Dabadie"/></NavLink>
               <div>
-                  <ul 
-                  id="navbar" className={this.state.clicked ? "#navbar active":"#navbar"} 
-                  onMouseLeave={this.handleMouseLeave}
-                  onClick={this.handleLinkClick}>
-                      <li>
-                          <NavLink to="/" onMouseEnter={this.handleMouseEnter}>Les périodes</NavLink>
-                            <ul className={this.state.showSubmenu ? 'visible' : 'submenu'}>
+              <ul id="navbar" className={this.state.clicked ? "#navbar active" : "#navbar"} onClick={this.handleLinkClick}>
+              <li>
+                {/* Modified NavLink for "Les périodes" to toggle submenu visibility */}
+                <NavLink to="/" onClick={this.toggleSubmenu}>Les périodes</NavLink>
+                <ul className={this.state.showSubmenu ? 'visible' : 'submenu'}>
                                 <li>
                                     <NavLink to="/Huile" onClick={this.handleLinkClick}>Huile</NavLink>
                                 </li>

@@ -12,6 +12,7 @@ body{
     -moz-column-width: 33%;
     column-width: 33%;
     padding: 0 12px;
+    object-fit: contain;
    
 }
 
@@ -64,7 +65,8 @@ body{
         -moz-column-count: 2;
         column-count: 2;
         
-    }  
+    }
+    
 }
 
 @media (max-width: 480px){
@@ -104,15 +106,17 @@ body{
     transform: scale(1);
 }
 .model img{
-    width: auto;
-    max-width: 100%;
+     width: auto; 
+    max-width: 90%;
     height: auto;
-    max-height: 100%;
+    max-height: 90vh;
     display: block;
     line-height: 0;
     box-sizing: border-box;
     padding: 20px 0 20px;
     margin: 0 auto;
+    object-fit: contain;
+   
 }
 .model.open svg{
     position: fixed;
