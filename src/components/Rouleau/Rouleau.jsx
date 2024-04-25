@@ -6,7 +6,7 @@ import GalleryItem from "../Utils/GalleryItem";
 // Dynamic image imports
 const imageNames = [
   "baie des anges",
-  "p",
+  "bain_turc",
   "Mont Tremblant",
   "Québec Winter",
   "Saint Tropez",

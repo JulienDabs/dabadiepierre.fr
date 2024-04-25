@@ -38,12 +38,16 @@ const Aerographe = () => {
     setModel({ isOpen: true, imgSrc: images[imgName], imgAlt: alt });
   };
 
-  let data = imageNames.map((name, index) => ({
-    id: index + 1,
-    imgName: name,
-    alt: toPascalCase(name), // Replace underscores with spaces for alt text
-  }));
+  let data = imageNames.map((name, index) => {
+    console.log(name); // This will log each name to see what is actually being passed
+    return {
+        id: index + 1,
+        imgName: name,
+        alt: toPascalCase(name), // Apply PascalCase
+    };
+});
 
+console.log(data);
   return (
     <>
       <h1 className="main-intro">Aérographie</h1>
