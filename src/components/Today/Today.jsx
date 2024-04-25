@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
-
+import { toPascalCase } from "../Utils/stringUtils";
+import GalleryItem from "../Utils/GalleryItem";
 // Dynamic image imports
 const imageNames = [
   "Amazone au perroquet", "Amazone", "Blonde", "Cat Woman", "Coup_de_Soleil",
@@ -11,18 +12,14 @@ const imageNames = [
   "Texas", "Vespa", "Gold Cup","Tokyo By Night", "Le Brusc", "Vie à Cuba"
 ];
 
+
+
 const images = imageNames.reduce((acc, imgName) => {
-  acc[imgName] = require(`./img/${imgName.replace(/\s/g, ' ')}.jpg`);
+  acc[imgName] = require(`../../assets/Today/img/${imgName.replace(/\s/g, ' ')}.jpg`);
   return acc;
 }, {});
 
-// GalleryItem Component
-const GalleryItem = ({ imgName, alt, onClick }) => (
-  <div className="pics" onClick={onClick}>
-    <img className="picture-style" src={images[imgName]} loading="lazy" style={{ width: "100%" }} alt={alt} />
-    <p className="alt-text">{alt}</p>
-  </div>
-);
+
 
 // Today Component
 const Today = () => {
@@ -35,7 +32,7 @@ const Today = () => {
   let data = imageNames.map((name, index) => ({
     id: index + 1,
     imgName: name,
-    alt: name.replace(/_/g, ' ')  // Replace underscores with spaces for alt text
+    alt: toPascalCase(name)  // Replace underscores with spaces for alt text
   }));
 
   return (
@@ -53,6 +50,7 @@ const Today = () => {
             imgName={item.imgName}
             alt={item.alt}
             onClick={() => getImg(item.imgName, item.alt)}
+            images={images}
           />
         ))}
       </div>

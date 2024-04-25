@@ -7,10 +7,7 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-.container {
-  width: 65%;
-  margin-left: 23rem;
-}
+
 
 .description{
     color: cornsilk;
@@ -31,7 +28,7 @@ body {
 }
 
 .main-intro-title {
-  font-family: "Freehand", "Arial", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 7rem;
   margin-bottom: -8px;
 }
@@ -101,10 +98,7 @@ body {
 }
 
 @media (max-width: 2560px) {
-    .container {
-      width: 60%;
-      margin-left: 25rem;
-    }
+   
   
     .home-img {
       width: 1097px;
@@ -114,10 +108,7 @@ body {
   }
 
 @media (max-width: 1440px) {
-  .container {
-    width: 77%;
-    margin-left: 10rem;
-  }
+ 
 
   .home-img {
     width: 1077px;
@@ -134,10 +125,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .container {
-    width: 77%;
-    margin-left: 7rem;
-  }
+ 
 
   .home-img {
     width: 767px;
@@ -159,10 +147,7 @@ body {
     column-count: 2;
   }
 
-  .container {
-    width: 78%;
-    margin-left: 5rem;
-  }
+  
 
   .home-img {
     width: 569px;
@@ -177,7 +162,7 @@ body {
     text-align: justify;
 }
 .main-intro-title {
-  font-family: "Freehand", "Arial", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 4rem;
   margin-bottom: -8px;
 }
@@ -190,10 +175,7 @@ body {
     column-count: 1;
   }
 
-  .container {
-    width: 79%;
-    margin-left: 2rem;
-  }
+ 
 
   .home-img {
     width: 319px;
@@ -207,7 +189,7 @@ body {
     text-align: justify;
 }
 .main-intro-title {
-  font-family: "Freehand", "Arial", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 4rem;
   margin-bottom: -8px;
 }
@@ -220,11 +202,7 @@ body {
     column-count: 1;
   }
 
-  .container {
-    width: 79%;
-    margin-left: 2rem;
-  }
-
+ 
   .home-img {
     width: 281px;
     height: 200px;
@@ -237,7 +215,7 @@ body {
     text-align: justify;
 }
 .main-intro-title {
-  font-family: "Freehand", "Arial", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 2rem;
   margin-bottom: -8px;
 }
@@ -300,10 +278,6 @@ body {
     right: 151px;
   }
 
-  .container {
-    width: 80%;
-    margin-left: 2rem;
-  }
 
   .home-img {
     width: 240px;
@@ -318,7 +292,7 @@ body {
     text-align: justify;
 }
 .main-intro-title {
-  font-family: "Freehand", "Arial", sans-serif;
+  font-family:"Nunito", sans-serif; 
   font-size: 2rem;
   margin-bottom: -8px;
 }

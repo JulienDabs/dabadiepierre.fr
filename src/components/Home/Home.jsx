@@ -1,26 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "./home.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import leBrusc from "../../assets/leBrusc.jpg";
-import tokyo from "../../assets/tokyo.jpg";
-import cuba from "../../assets/cuba.jpg";
-import PBrusc from "./img/Le_Port_du_Brusc.jpg";
-import MtSalva from "./img/Mont_SALVA.jpg";
-import NYC from "./img/NY_at_night.jpg";
-import Vespa from "./img/Vespa.jpg";
+// import Slider from "react-slick";
+// import leBrusc from "../../assets/leBrusc.jpg";
+// import tokyo from "../../assets/tokyo.jpg";
+// import cuba from "../../assets/cuba.jpg";
+// import PBrusc from "./img/Le_Port_du_Brusc.jpg";
+// import MtSalva from "./img/Mont_SALVA.jpg";
+// import NYC from "./img/NY_at_night.jpg";
+// import Vespa from "./img/Vespa.jpg";
+import CustomCarousel from "../UI/Carousel";
 
 // Home Component
 const Home = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dotsClass: "slick-dots slick-thumb",
-  };
+ 
 
   return (
     <>
@@ -29,7 +23,7 @@ const Home = () => {
         <h2>Artiste Peintre</h2>
         <h3>Une évolution au fil du temps</h3>
       </div>
-      <div className="container">
+      {/* <div className="container">
         <div className="slider-container">
           <Slider {...settings}>
             <div>
@@ -55,7 +49,9 @@ const Home = () => {
             </div>
           </Slider>
         </div>
-      </div>
+      </div> */}
+
+      <CustomCarousel />
       <p className="description">
         Découvrez l'univers fascinant de Pierre, un artiste peintre dont le
         talent et la créativité traversent les périodes. Sur son site, vous êtes
