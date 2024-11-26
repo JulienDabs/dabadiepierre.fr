@@ -36,4 +36,4 @@ jobs:
                   username: ${{ secrets.O2SWITCH_USERNAME }}
                   password: ${{ secrets.O2SWITCH_PASSWORD }}
                   local-dir: build/
-                  server-dir: ${{ secrets.O2SWITCH_PATH}}
+                  server-dir: ${{ secrets.O2SWITCH_PATH }}
