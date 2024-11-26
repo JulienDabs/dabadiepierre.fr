@@ -35,5 +35,5 @@ jobs:
                   port: 21
                   username: ${{ secrets.O2SWITCH_USERNAME }}
                   password: ${{ secrets.O2SWITCH_PASSWORD }}
-                  localPath: build/
-                  remotePath: ${{ secrets.O2SWITCH_PATH}}
+                  local-dir: build/
+                  server-dir: ${{ secrets.O2SWITCH_PATH}}
