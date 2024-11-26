@@ -1,0 +1,36 @@
+name: Deploy
+on:
+    push:
+        branches:
+            - master
+
+    
+
+jobs:
+    buildNDeploy:
+        environment: production
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash
+                working-directory: .
+
+        steps: 
+            - name: Fetch Code
+              uses: actions/checkout@v4
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build
+              run: npm run build
+
+            - name: Deploy to o2switch via FTP
+              uses: SamKirkland/FTP-Deploy-Action@4.3.2
+              with:
+                  server: ${{ secrets.O2SWITCH_HOST }}
+                  port: 21
+                  username: ${{ secrets.O2SWITCH_USERNAME }}
+                  password: ${{ secrets.O2SWITCH_PASSWORD }}
+                  localPath: build/
+                  remotePath: ${{ secrets.O2SWITCH_PATH}}
