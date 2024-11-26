@@ -13,6 +13,7 @@ import Huile from './components/Huile/Huile';
 import Today from "./components/Today/Today";
 import Footer from "./components/Footer/Footer";
 import NavPic from "./nav bar pic/dabadie.fr.png"
+import Actu from "./components/Actualité/Actu";
 
 
 const App = () => (
@@ -112,6 +113,10 @@ class NavBar extends Component {
                       <li>
                           <NavLink to ="/Biographie" onClick={this.handleLinkClick}>Biographie</NavLink>
                       </li>
+
+                      <li>
+                          <NavLink to ="/Actualités" onClick={this.handleLinkClick}>Actualités</NavLink>
+                      </li>
                       
                   </ul>
               </div>
@@ -136,6 +141,7 @@ const Main = () => {
         <Route exact path='/Japon' element={<Japon/>}></Route>
         <Route exact path='/Contemporain' element={<Contemporain/>}></Route>
         <Route exact path='/Huile' element={<Huile/>}></Route>
+        <Route exact path="/Actualités" element={<Actu/>}></Route>
         
       
     </Routes>

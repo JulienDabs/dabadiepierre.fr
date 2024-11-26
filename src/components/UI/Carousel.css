@@ -1,37 +1,59 @@
 .carousel-container {
-    position: relative;
-    max-width: 600px; /* Adjust based on your requirement */
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    justify-content: center;
-  }
-  
+  position: relative;
+  max-width: 700px; /* Adjust based on your requirement */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-image {
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+@media (max-width: 425px) {
   .carousel-image {
-    width: 100%;
-    transition: opacity 1s ease-in-out;
+    width: 85%;
   }
-  
-  .prev-button,
-  .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 2;
+}
+
+@media (max-width: 375px) {
+  .carousel-image {
+    width: 85%;
   }
-  
-  .prev-button {
-    left: 10px;
+}
+  @media (max-width: 320px) {
+    .carousel-image {
+      width: 90%;
+    }
+    .description {
+      width: 90%;
+      margin: 0 auto;
+      padding: 1rem;
+    }
   }
-  
-  .next-button {
-    right: 10px;
-  }
-  
+

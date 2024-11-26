@@ -7,7 +7,9 @@ import PBrusc from "../Home/img/Le_Port_du_Brusc.jpg";
 import MtSalva from "../Home/img/Mont_SALVA.jpg";
 import NYC from "../Home/img/NY_at_night.jpg";
 import Vespa from "../Home/img/Vespa.jpg";
-const images = [leBrusc, tokyo, cuba, PBrusc, MtSalva, NYC, Vespa];
+import Canadairs from "../../assets/Today/img/Canadairs.jpg";
+import Corsica from '../../assets/Today/img/Corsica_Italia.jpg'
+const images = [leBrusc, tokyo, cuba, PBrusc, MtSalva, NYC, Vespa, Canadairs, Corsica];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

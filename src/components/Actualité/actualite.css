@@ -1,0 +1,41 @@
+.container {
+    padding: 20px;
+  }
+
+  h1, h2, h3, h4, h5{
+    color: cornsilk;
+    text-align: center;
+  }
+
+ 
+
+  p{
+    color: white
+  }
+
+.img {
+    display: block; /* Make the image a block-level element */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 50%; 
+    border-radius: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .img {
+      width: 85%;
+    }
+  }
+  
+    
+  @media (max-width: 375px) {
+    .img {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .img {
+      width: 100%;
+    }
+  }
+  
