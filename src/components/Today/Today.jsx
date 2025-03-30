@@ -9,7 +9,7 @@ const imageNames = [
   "femme à la rose", "Femme au parfum", "Fraise", "Gas Station (2)", "Gas station",
   "Italie", "La Havane", "Le Mont Salva", "Le Port du Brusc", "Mont SALVA (2)",
   "Mont Tremblant", "NY at night", "Pont NY", "Québec Girl", "Royan",
-  "Texas", "Vespa", "Gold Cup","Tokyo By Night", "Le Brusc", "Vie à Cuba"
+  "Texas", "Vespa", "Gold Cup","Tokyo By Night", "Le Brusc", "Vie à Cuba", "Cafetière et Cocktail avec cerises", "Vue de Marseille d'après Nicolas de Staël"
 ];
 
 

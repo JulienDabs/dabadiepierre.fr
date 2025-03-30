@@ -8,8 +8,10 @@ import MtSalva from "../Home/img/Mont_SALVA.jpg";
 import NYC from "../Home/img/NY_at_night.jpg";
 import Vespa from "../Home/img/Vespa.jpg";
 import Canadairs from "../../assets/Today/img/Canadairs.jpg";
-import Corsica from '../../assets/Today/img/Corsica_Italia.jpg'
-const images = [leBrusc, tokyo, cuba, PBrusc, MtSalva, NYC, Vespa, Canadairs, Corsica];
+import Corsica from '../../assets/Today/img/Corsica_Italia.jpg';
+import Cocktail from '../../assets/Today/img/Cafetière et Cocktail avec cerises.jpg';
+import Marseille from "../../assets/Today/img/Vue de Marseille d'après Nicolas de Staël.jpg";
+const images = [Cocktail, Marseille, leBrusc, tokyo, cuba, PBrusc, MtSalva, NYC, Vespa, Canadairs, Corsica];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
