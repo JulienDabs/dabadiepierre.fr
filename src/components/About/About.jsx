@@ -8,7 +8,7 @@ const Bio = () => {
     <div className='bio'>
       <div className='bio-intro'>
       <h1 className='bio-intro-title'>Pierre Dabadie</h1>
-      <p>Pierre DABADIE est un peintre français née à Alger en 1951</p>
+      <p>Pierre DABADIE est un peintre français né à Alger en 1951</p>
       <p>Formation : Autodidacte</p>
       <p>Mouvement : hyper-réalisme</p>
       <p>Influences : Edward Hopper & David Hockney</p>

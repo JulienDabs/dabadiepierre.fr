@@ -7,7 +7,7 @@ const Actu = () => {
   return (
     <>
       <div className="container">
-        <h1>Suivez l'actualité de Pierre Dabadie</h1>
+        <h1>Suivez les actualités de Pierre Dabadie</h1>
 
         <h3>Exposition Espace Jules de Greling (Six-Fours-Les-Plages)</h3>
         <h4>Du 3 au 18 mai 2025</h4>
