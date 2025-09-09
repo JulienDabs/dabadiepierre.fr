@@ -1,53 +1,63 @@
 import React, { useState } from "react";
-import "../Home/home.css";
+import "../../Home/home.css";
+import { toPascalCase } from "../../Utils/stringUtils";
+import GalleryItem from "../../Utils/GalleryItem";
 import CloseIcon from "@mui/icons-material/Close";
-import { toPascalCase } from "../Utils/stringUtils";
-import GalleryItem from "../Utils/GalleryItem";
+
 // Dynamic image imports
 const imageNames = [
-  "baie des anges",
-  "bain_turc",
-  "Mont Tremblant",
-  "Québec Winter",
-  "Saint Tropez",
-  "Villa Californienne",
-  "Villa Californienne 2",
-  "vue sur mer",
+  "caro pop art 2008",
+  "coup de soleil",
+  "escarpin",
+  "glace bleue",
+  "lavandes aero",
+  "Nu",
+  "pubs",
+  "royan",
+  "st Rémi d'Amherst",
+  "Texas",
+  "Tomate et Poivrons",
 ];
 
 
-
 const images = imageNames.reduce((acc, imgName) => {
-  acc[imgName] = require(`../../assets/Rouleau/img/${imgName.replace(/\s/g, "_")}.jpg`);
+  acc[imgName] = require(`../../../assets/Aerographe/img/${imgName.replace(
+    /\s/g,
+    "_"
+  )}.jpg`);
   return acc;
 }, {});
 
 
 
-// Rouleau Component
-const Rouleau = () => {
+// Aerographe Component
+const Aerographe = () => {
   const [model, setModel] = useState({ isOpen: false, imgSrc: "", imgAlt: "" });
 
   const getImg = (imgName, alt) => {
     setModel({ isOpen: true, imgSrc: images[imgName], imgAlt: alt });
   };
 
-  let data = imageNames.map((name, index) => ({
-    id: index + 1,
-    imgName: name,
-    alt: toPascalCase(name), // Replace underscores with spaces for alt text
-  }));
+  let data = imageNames.map((name, index) => {
+    console.log(name); // This will log each name to see what is actually being passed
+    return {
+        id: index + 1,
+        imgName: name,
+        alt: toPascalCase(name), // Apply PascalCase
+    };
+});
 
+console.log(data);
   return (
     <>
-      <h1 className="main-intro">La peinture au rouleau</h1>
+      <h1 className="main-intro">Aérographie</h1>
       <div className={model.isOpen ? "model open" : "model"}>
         <img
           src={model.imgSrc}
           alt={model.imgAlt}
           style={{ width: "100%", maxWidth: "1000px", height: "auto" }}
         />
-        <p className="alt-text-legend">{model.imgAlt}</p>
+        <p className="alt-text-legend">{toPascalCase(model.imgAlt)}</p>
         <CloseIcon
           onClick={() => setModel({ isOpen: false, imgSrc: "", imgAlt: "" })}
         />
@@ -67,4 +77,4 @@ const Rouleau = () => {
   );
 };
 
-export default Rouleau;
+export default Aerographe;

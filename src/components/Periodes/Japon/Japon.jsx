@@ -1,34 +1,28 @@
 import React, { useState } from "react";
-import "../Home/home.css";
+import "../../Home/home.css";
 import CloseIcon from "@mui/icons-material/Close";
-import { toPascalCase } from "../Utils/stringUtils";
-import GalleryItem from "../Utils/GalleryItem";
+import { toPascalCase } from "../../Utils/stringUtils";
+import GalleryItem from "../../Utils/GalleryItem";
 // Dynamic image imports
 const imageNames = [
-  "café des bains ROYAN",
-  "Cannes",
-  "Femme Bleue",
-  "gerbe d'eau",
-  "Main d'Enfant",
-  "Piscine",
-  "port sanary 1er prix",
-  "Sanary",
+  "La Vague",
+  "Nuit glaciale",
+  "Tempete de Neige",
+  "Viet Nam",
+  "Zéro",
 ];
 
 
 
 const images = imageNames.reduce((acc, imgName) => {
-  acc[imgName] = require(`../../assets/Contemporain/img/${imgName.replace(
-    /\s/g,
-    "_"
-  )}.jpg`);
+  acc[imgName] = require(`../../../assets/Japon/img/${imgName.replace(/\s/g, "_")}.jpg`);
   return acc;
 }, {});
 
 
 
-// Contemporain Component
-const Contemporain = () => {
+// Japon Component
+const Japon = () => {
   const [model, setModel] = useState({ isOpen: false, imgSrc: "", imgAlt: "" });
 
   const getImg = (imgName, alt) => {
@@ -38,12 +32,12 @@ const Contemporain = () => {
   let data = imageNames.map((name, index) => ({
     id: index + 1,
     imgName: name,
-    alt: toPascalCase(name), // Replace underscores with spaces for alt text
+    alt: toPascalCase(name), // Assuming alt text is the same as the image name
   }));
 
   return (
     <>
-      <h1 className="main-intro">Comtemporain</h1>
+      <h1 className="main-intro">La période Japon (reproductions)</h1>
       <div className={model.isOpen ? "model open" : "model"}>
         <img
           src={model.imgSrc}
@@ -70,4 +64,4 @@ const Contemporain = () => {
   );
 };
 
-export default Contemporain;
+export default Japon;

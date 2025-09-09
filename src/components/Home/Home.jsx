@@ -23,33 +23,7 @@ const Home = () => {
         <h2>Artiste Peintre</h2>
         <h3>Une évolution au fil du temps</h3>
       </div>
-      {/* <div className="container">
-        <div className="slider-container">
-          <Slider {...settings}>
-            <div>
-              <img className="home-img" src={leBrusc} alt="Peinture par Pierre Dabadie capturant la vue pittoresque sur Le Brusc, Six-Fours-les-Plages, avec détails vibrants du paysage côtier." />
-            </div>
-            <div>
-              <img className="home-img" src={tokyo} alt="Oeuvre de Pierre Dabadie illustrant Tokyo de nuit, mettant en lumière les néons éclatants et l'activité urbaine de la capitale japonaise." />
-            </div>
-            <div>
-              <img className="home-img" src={cuba} alt="Tableau de Pierre Dabadie représentant la vie quotidienne à Cuba, avec des scènes vibrantes de rues animées et d'architecture colorée." />
-            </div>
-            <div>
-              <img className="home-img" src={PBrusc} alt= "Création artistique de Pierre Dabadie du port du Brusc, Six-Fours-les-Plages, soulignant les bateaux traditionnels et la sérénité maritime." />
-            </div>
-            <div>
-              <img className="home-img" src={MtSalva} alt="Peinture de Pierre Dabadie du Mont Salva à Six-Fours-les-Plages, offrant une vue majestueuse sur la nature environnante et le paysage méditerranéen." />
-            </div>
-            <div>
-              <img className="home-img" src={NYC} alt="Art de Pierre Dabadie capturant l'essence d'un spectacle à New York City, avec une affiche vibrante reflétant l'énergie et la culture de la ville." />
-            </div>
-            <div>
-              <img className="home-img" src={Vespa} alt="Peinture par Pierre Dabadie d'une Vespa classique, symbolisant l'élégance et le style européen, avec un souci du détail remarquable." />
-            </div>
-          </Slider>
-        </div>
-      </div> */}
+      
 
       <CustomCarousel />
       <p className="description">

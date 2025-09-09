@@ -4,17 +4,18 @@ import "./navbar.css";
 import { NavLink, Route, Routes} from 'react-router-dom';
 import Home from './components/Home/Home';
 import Bio from './components/About/About';
-import Aerographe from './components/Aerographe/aerographe';
-import Animaux from './components/Animaux/Animaux';
-import Rouleau from './components/Rouleau/Rouleau';
-import Japon from './components/Japon/Japon';
-import Contemporain from './components/Contemporain/Contemporain';
-import Huile from './components/Huile/Huile';
-import Today from "./components/Today/Today";
+import Aerographe from './components/Periodes/Aerographe/aerographe';
+import Animaux from './components/Periodes/Animaux/Animaux';
+import Rouleau from './components/Periodes/Rouleau/Rouleau';
+import Japon from './components/Periodes/Japon/Japon';
+import Contemporain from './components/Periodes/Contemporain/Contemporain';
+import Huile from './components/Periodes/Huile/Huile';
+import Today from "./components/Periodes/Today/Today";
 import Footer from "./components/Footer/Footer";
 import NavPic from "./nav bar pic/dabadie.fr.png"
-import Actu from "./components/Actualité/Actu";
+import Actu from "./components/Actualites/Actu";
 
+export { NavBar };
 
 const App = () => (
   <div className='app'>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../Home/home.css";
-import { toPascalCase } from "../Utils/stringUtils";
-import GalleryItem from "../Utils/GalleryItem";
+import "../../Home/home.css";
+import { toPascalCase } from "../../Utils/stringUtils";
+import GalleryItem from "../../Utils/GalleryItem";
 import CloseIcon from "@mui/icons-material/Close";
 
 // Dynamic image imports
@@ -22,7 +22,7 @@ const imageNames = [
 
 const images = imageNames.reduce((acc, imgName) => {
   //const correctedPicName = toPascalCase(imgName);
-  acc[imgName] = require(`../../assets/Animaux/img/${imgName.replace(
+  acc[imgName] = require(`../../../assets/Animaux/img/${imgName.replace(
     /\s/g,
     "_"
   )}.jpg`);

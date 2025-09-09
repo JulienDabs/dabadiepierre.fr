@@ -1,28 +1,58 @@
 import React, { useState } from "react";
-import "../Home/home.css";
+import "../../Home/home.css";
+import { toPascalCase } from "../../Utils/stringUtils";
+import GalleryItem from "../../Utils/GalleryItem";
 import CloseIcon from "@mui/icons-material/Close";
-import { toPascalCase } from "../Utils/stringUtils";
-import GalleryItem from "../Utils/GalleryItem";
+
 // Dynamic image imports
 const imageNames = [
-  "La Vague",
-  "Nuit glaciale",
-  "Tempete de Neige",
-  "Viet Nam",
-  "Zéro",
+  "alderney",
+  "antilles",
+  "bouquet moderne",
+  "bouquet",
+  "café de nuit",
+  "cage tunisienne",
+  "caroline",
+  "chaise 1ère année",
+  "cyprès+lavande",
+  "fenetre sur mer",
+  "Geza",
+  "grèce",
+  "hôtel le garoupe.antibes",
+  "intérieur rouge matisse",
+  "iris",
+  "julien",
+  "la cadière",
+  "La tristesse du Roy",
+  "Lavandes",
+  "le brusc",
+  "mairie sanary",
+  "maqueraux",
+  "martinique",
+  "oliviers",
+  "Orangers",
+  "Poète du Brusc",
+  "Port en Méditerrannée",
+  "Rhum",
+  "Sanary sur mer",
+  "st tropez à l'huile",
+  "trompette 1ère année",
+  "Tropiques",
+  "violon matisse",
+  "vitrail",
+  "Vue de Tanger",
 ];
 
 
-
 const images = imageNames.reduce((acc, imgName) => {
-  acc[imgName] = require(`../../assets/Japon/img/${imgName.replace(/\s/g, "_")}.jpg`);
+  acc[imgName] = require(`../../../assets/Huile/img/${imgName.replace(/\s/g, " ")}.jpg`);
   return acc;
 }, {});
 
 
 
-// Japon Component
-const Japon = () => {
+// Huile Component
+const Huile = () => {
   const [model, setModel] = useState({ isOpen: false, imgSrc: "", imgAlt: "" });
 
   const getImg = (imgName, alt) => {
@@ -32,12 +62,12 @@ const Japon = () => {
   let data = imageNames.map((name, index) => ({
     id: index + 1,
     imgName: name,
-    alt: toPascalCase(name), // Assuming alt text is the same as the image name
+    alt: toPascalCase(name), // Replace underscores with spaces for alt text
   }));
 
   return (
     <>
-      <h1 className="main-intro">La période Japon (reproductions)</h1>
+      <h1 className="main-intro">La peinture à l'huile et acrylique</h1>
       <div className={model.isOpen ? "model open" : "model"}>
         <img
           src={model.imgSrc}
@@ -64,4 +94,4 @@ const Japon = () => {
   );
 };
 
-export default Japon;
+export default Huile;
