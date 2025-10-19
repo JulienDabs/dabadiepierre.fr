@@ -11,10 +11,10 @@ import Canadairs from "../../assets/Today/img/Canadairs.jpg";
 import Corsica from "../../assets/Today/img/Corsica_Italia.jpg";
 import Cocktail from "../../assets/Today/img/Cafetière et Cocktail avec cerises.jpg";
 import Marseille from "../../assets/Today/img/Vue de Marseille d'après Nicolas de Staël.jpg";
-import FemmeADC from "../../assets/Today/img/Femme Art Déco.jpg";
 import Hokusai from "../../assets/Today/img/Grande Vague Hokusai.jpg";
+import Chat from "../../assets/Today/img/Le chat.jpg";
 
-const images = [Hokusai, Cocktail, Marseille, leBrusc, tokyo, cuba, PBrusc, MtSalva, NYC, Vespa, Canadairs, Corsica, FemmeADC];
+const images = [Chat, Hokusai, Cocktail, Marseille, leBrusc, tokyo, cuba, PBrusc, MtSalva, NYC, Vespa, Canadairs, Corsica,];
 
 const AUTOPLAY_MS = 4000;
 

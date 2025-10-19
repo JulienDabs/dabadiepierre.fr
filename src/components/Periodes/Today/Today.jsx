@@ -11,7 +11,7 @@ const imageNames = [
   "Mont Tremblant", "NY at night", "Pont NY", "Québec Girl", "Royan",
   "Texas", "Vespa", "Gold Cup","Tokyo By Night", "Le Brusc", "Vie à Cuba",
    "Cafetière et Cocktail avec cerises", "Vue de Marseille d'après Nicolas de Staël","Femme Art Déco", 
-   "Fraise en cube", "St Mandrier - Vintage", "Art Nouveau 1900", "Grande Vague Hokusai",
+   "Fraise en cube", "St Mandrier - Vintage", "Art Nouveau 1900", "Grande Vague Hokusai", "Le chat", "Canadairs", "Corsica Italia"
 ];
 
 
