@@ -13,8 +13,9 @@ import Cocktail from "../../assets/Today/img/Cafetière et Cocktail avec cerises
 import Marseille from "../../assets/Today/img/Vue de Marseille d'après Nicolas de Staël.jpg";
 import Hokusai from "../../assets/Today/img/Grande Vague Hokusai.jpg";
 import Chat from "../../assets/Today/img/Le chat.jpg";
+import Casserlane from "../../assets/Today/img/La Casserlane.jpg";
 
-const images = [Chat, Hokusai, Cocktail, Marseille, leBrusc, tokyo, cuba, PBrusc, MtSalva, NYC, Vespa, Canadairs, Corsica,];
+const images = [Chat, Hokusai, Cocktail, Marseille, leBrusc, tokyo, cuba, PBrusc, MtSalva, NYC, Vespa, Canadairs, Corsica, Casserlane];
 
 const AUTOPLAY_MS = 4000;
 
